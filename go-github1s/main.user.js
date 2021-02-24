@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name         go-github1s
-// @version      0.1
+// @version      0.2
+// @updateURL    https://cdn.jsdelivr.net/gh/yooourt/tm-scripts/go-github1s/main.user.js
+// @downloadURL  https://cdn.jsdelivr.net/gh/yooourt/tm-scripts/go-github1s/main.user.js
 // @author       yooourt
 // @match        https://github.com/*
 // ==/UserScript==
@@ -12,7 +14,8 @@ const appendHtml = (element, html) => {
 }
 
 const goGithub1s = () => {
-    location.host = 'github1s.com'
+    let url = location.href.replace('github', 'github1s')
+    window.open(url, '_blank')
 }
 
 const insertStyle = () => {
